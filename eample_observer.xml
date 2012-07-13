@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<observer>
+    <id>org.ohmage.blah.ExampleProbe</id>
+    <version>2012071200</version>
+    
+    <name>ExampleProbe</name>
+    <description>An example probe to highlight the ohmageProbeLibrary.</description>
+    <versionString>1.0</versionString>
+    
+    <stream>
+        <id>simple</id>
+        <version>2012071200</version>
+        
+        <name>Just a string</name>
+        <description>This only records a string</description>
+
+        <schema>
+            {
+                "type":"record",
+                "namespace":"org.ohmage.ExampleProbeSimple",
+                "name":"simple",
+                "doc":"Only records a string.",
+                "fields":[
+                    {
+                        "name":"simple_text",
+                        "doc":"Random text.",
+                        "type":"string"
+                    }
+                ]
+            }
+        </schema>
+    </stream>
+    
+    <stream>
+        <id>kittens</id>
+        <version>2012071200</version>
+        
+        <name>Kittens</name>
+        <description>Where and when do we see kittens?</description>
+        
+        <metadata>
+            <id />
+            <timestamp />
+            <location />
+        </metadata>
+        
+        <schema>
+            {
+                "type":"record",
+                "namespace":"org.ohmage.ExampleProbeKittens",
+                "name":"kittens",
+                "doc":"Documents the number of kittens seen.",
+                "fields":[
+                    {
+                        "name":"count",
+                        "doc":"The number of kittens seen.",
+                        "type":"int"
+                    }
+                ]
+            }
+        </schema>
+    </stream>
+    
+    <stream>
+        <id>list</id>
+        <version>2012071200</version>
+        
+        <name>List</name>
+        <description>This is just a list.</description>
+        
+        <metadata>
+            <id />
+            <timestamp />
+            <location />
+        </metadata>
+        
+        <schema>
+            {
+                "type":"record",
+                "namespace":"org.ohmage.ExampleProbeList",
+                "name":"list",
+                "doc":"Just a list of strings",
+                "fields":[
+                    {
+                        "name":"items",
+                        "doc":"The list of strings",
+                        "type":{
+                            "type":"array",
+                            "items":{
+                                "name":"listItem",
+                                "doc":"Each individual list item.",
+                                "type":"string"
+                            }
+                        }
+                    }
+                ]
+            }
+        </schema>
+    </stream>
+</observer>
