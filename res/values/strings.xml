@@ -4,5 +4,9 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_probe_example">Probe Example</string>
+    <string name="send_response">Send Response</string>
+    <string name="send_simple_string">Send Simple String</string>
+    <string name="cat_count_">Cat Count:</string>
+    <string name="send_cat_count">Send Cat Count</string>
 
 </resources>

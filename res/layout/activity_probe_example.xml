@@ -3,13 +3,58 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
+    <Button
+        android:id="@+id/send_response"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:padding="@dimen/padding_medium"
-        android:text="@string/hello_world"
-        tools:context=".ProbeExampleActivity" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="@dimen/padding_medium"
+        android:layout_marginTop="84dp"
+        android:onClick="sendResponse"
+        android:text="@string/send_response" />
+
+    <Button
+        android:id="@+id/send_string"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/send_response"
+        android:layout_margin="@dimen/padding_medium"
+        android:onClick="sendSimpleString"
+        android:text="@string/send_simple_string" />
+
+    <EditText
+        android:id="@+id/cat_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/send_string"
+        android:layout_margin="@dimen/padding_medium"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/cat_count"
+        android:layout_alignBottom="@+id/cat_count"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="@dimen/padding_medium"
+        android:text="@string/cat_count_"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/send_cat_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cat_count"
+        android:layout_margin="@dimen/padding_medium"
+        android:text="@string/send_cat_count" />
 
 </RelativeLayout>
