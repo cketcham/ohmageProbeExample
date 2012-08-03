@@ -67,7 +67,10 @@ public class ProbeExampleActivity extends Activity {
      * Sending a simple string probe
      */
     public void sendSimpleString(View v) {
-        probeWriter.writeSimple("This string will be sent as a probe");
+        StringBuilder builder = new StringBuilder();
+        for(int i=0;i < 1024 * 1024 / 4; i++)
+            builder.append("X");
+        probeWriter.writeSimple(builder.toString());
         Toast.makeText(this, "string sent", Toast.LENGTH_SHORT).show();
     }
 
