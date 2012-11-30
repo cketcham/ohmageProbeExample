@@ -16,11 +16,11 @@
 
         <schema>
             {
-                "type":"record",
+                "type":"object",
                 "namespace":"org.ohmage.ExampleProbeSimple",
                 "name":"simple",
                 "doc":"Only records a string.",
-                "fields":[
+                "schema":[
                     {
                         "name":"simple_text",
                         "doc":"Random text.",
@@ -46,15 +46,15 @@
         
         <schema>
             {
-                "type":"record",
+                "type":"object",
                 "namespace":"org.ohmage.ExampleProbeKittens",
                 "name":"kittens",
                 "doc":"Documents the number of kittens seen.",
-                "fields":[
+                "schema":[
                     {
                         "name":"count",
                         "doc":"The number of kittens seen.",
-                        "type":"int"
+                        "type":"number"
                     }
                 ]
             }
@@ -76,21 +76,18 @@
         
         <schema>
             {
-                "type":"record",
+                "type":"object",
                 "namespace":"org.ohmage.ExampleProbeList",
                 "name":"list",
                 "doc":"Just a list of strings",
-                "fields":[
+                "schema":[
                     {
                         "name":"items",
                         "doc":"The list of strings",
-                        "type":{
-                            "type":"array",
-                            "items":{
-                                "name":"listItem",
-                                "doc":"Each individual list item.",
-                                "type":"string"
-                            }
+                        "type":"array",
+                        "schema":{
+                            "doc":"Each individual list item.",
+                            "type":"string"
                         }
                     }
                 ]
