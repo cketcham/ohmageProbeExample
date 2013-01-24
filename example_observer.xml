@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <observer>
     <id>org.ohmage.blah.ExampleProbe</id>
-    <version>2012071200</version>
+    <version>2013012300</version>
     
     <name>ExampleProbe</name>
     <description>An example probe to highlight the ohmageProbeLibrary.</description>
@@ -41,7 +41,6 @@
         <metadata>
             <id />
             <timestamp />
-            <location />
         </metadata>
         
         <schema>
@@ -67,13 +66,7 @@
         
         <name>List</name>
         <description>This is just a list.</description>
-        
-        <metadata>
-            <id />
-            <timestamp />
-            <location />
-        </metadata>
-        
+
         <schema>
             {
                 "type":"object",

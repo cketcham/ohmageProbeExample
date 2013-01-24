@@ -23,14 +23,14 @@ import java.util.Arrays;
 public class ExampleProbeWriter extends ProbeWriter {
 
     private static final String OBSERVER_ID = "org.ohmage.blah.ExampleProbe";
-    private static final int OBSERVER_VERSION = 2012071200;
+    private static final int OBSERVER_VERSION = 2013012300;
 
     private static final String STREAM_SIMPLE = "simple";
     private static final int STREAM_SIMPLE_VERSION = 2012071200;
 
     private static final String STREAM_KITTENS = "kittens";
     private static final int STREAM_KITTENS_VERSION = 2012071200;
-    
+
     private static final String STREAM_LIST = "list";
     private static final int STREAM_LIST_VERSION = 2012071200;
 
@@ -80,6 +80,8 @@ public class ExampleProbeWriter extends ProbeWriter {
             data.put("count", count);
             probe.setData(data.toString());
 
+            probe.withId().now();
+
             probe.write(this);
         } catch (RemoteException e) {
             // TODO Auto-generated catch block
@@ -89,10 +91,10 @@ public class ExampleProbeWriter extends ProbeWriter {
             e.printStackTrace();
         }
     }
-    
 
     /**
      * This function writes a list of items
+     * 
      * @param items
      */
     public void writeList(String... items) {
