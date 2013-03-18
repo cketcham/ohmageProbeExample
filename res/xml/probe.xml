@@ -1,0 +1,5 @@
+<probe xmlns:probe="http://schemas.android.com/apk/res-auto"
+    probe:observerId="org.ohmage.blah.ExampleProbe"
+    probe:observerName="ExampleProbe"
+    probe:observerVersionCode="2013012300"
+    probe:observerVersionName="1.0" />
